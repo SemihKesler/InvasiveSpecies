@@ -32,6 +32,8 @@ public class GrabbableObject : CAVE2Interactable {
 
     public enum HoldingStyle { ButtonPress, ButtonHold };
 
+    private Rigidbody rb;
+
     [SerializeField]
     bool grabbed;
 
@@ -101,6 +103,7 @@ public class GrabbableObject : CAVE2Interactable {
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         // Visuals
         pointingOverHighlight = new GameObject("wandHighlight");
         pointingOverHighlight.transform.parent = transform;
@@ -158,6 +161,15 @@ public class GrabbableObject : CAVE2Interactable {
     }
     void Update()
     {
+        if (!grabbed)
+        {
+            rb.constraints = RigidbodyConstraints.FreezeAll;
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.None;
+        }
+
         // Interaction
         UpdateWandOverTimer();
 
@@ -209,17 +221,17 @@ public class GrabbableObject : CAVE2Interactable {
         }
         else if(wasGrabbed)
         {
-            Vector3 throwForce = Vector3.zero;
-            for (int i = 0; i < previousPositions.Count; i++ )
-            {
-                Vector3 s1 = (Vector3)previousPositions.Dequeue();
-                Vector3 s2 = GetComponent<Rigidbody>().position;
+            //Vector3 throwForce = Vector3.zero;
+            //for (int i = 0; i < previousPositions.Count; i++ )
+            //{
+            //    Vector3 s1 = (Vector3)previousPositions.Dequeue();
+            //    Vector3 s2 = GetComponent<Rigidbody>().position;
                 
-                if ( previousPositions.Count > 0 )
-                    s2 = (Vector3)previousPositions.Dequeue();
-                throwForce += (s2 - s1);
-            }
-            GetComponent<Rigidbody>().AddForce(throwForce * 10, ForceMode.Impulse);
+            //    if ( previousPositions.Count > 0 )
+            //        s2 = (Vector3)previousPositions.Dequeue();
+            //    throwForce += (s2 - s1);
+            //}
+            //GetComponent<Rigidbody>().AddForce(throwForce * 10, ForceMode.Impulse);
             wasGrabbed = false;
         }
     }
