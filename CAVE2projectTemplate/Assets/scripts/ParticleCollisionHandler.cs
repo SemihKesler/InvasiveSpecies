@@ -29,7 +29,7 @@ public class ParticleCollisionHandler : MonoBehaviour
                 AudioSource.PlayClipAtPoint(collisionSound, other.transform.position);
             }
             Color newColor = material.color;
-            newColor.a -= 0.05f;
+            newColor.a -= fadeSpeed;
             Debug.Log(newColor.a);
             material.color = newColor;
             if (material.color.a <= 0)
