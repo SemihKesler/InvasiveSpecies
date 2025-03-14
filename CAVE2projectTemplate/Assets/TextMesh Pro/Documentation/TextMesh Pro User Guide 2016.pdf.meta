@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:CAVE2projectTemplate/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
 guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
 ========
@@ -7,12 +8,17 @@ guid: 52ad9a57f8825234ca076631329f544d
 folderAsset: yes
 >>>>>>>> Stashed changes:CAVE2projectTemplate/Assets/Exercise 2/Scene.meta
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<<< HEAD:CAVE2projectTemplate/Assets/Sounds.meta
 guid: 56366a8f70e9b4df48e3c96397cb4f55
 folderAsset: yes
 ========
 guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
 >>>>>>>> ed2ae60b0b56b4a13a83df7988e7f70e8dcd45cd:CAVE2projectTemplate/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}

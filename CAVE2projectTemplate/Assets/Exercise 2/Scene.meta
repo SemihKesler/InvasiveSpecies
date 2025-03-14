@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:CAVE2projectTemplate/Assets/Exercise 2/Scene.meta
 guid: 52ad9a57f8825234ca076631329f544d
+========
+guid: 559fc1b5a43447649bfde61ccabbcef0
+>>>>>>>> Stashed changes:CAVE2projectTemplate/Assets/Exercise 2.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

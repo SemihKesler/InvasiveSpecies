@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:CAVE2projectTemplate/Assets/Plant Facts.meta
 guid: 61cca8a69a27b324b9524fd87e29a8d4
+========
+guid: 4558e330311e5ae4a82dded2e77dafde
+>>>>>>>> Stashed changes:CAVE2projectTemplate/Assets/Instructions.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

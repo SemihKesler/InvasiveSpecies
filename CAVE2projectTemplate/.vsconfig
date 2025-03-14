@@ -1,5 +1,8 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 {
   "version": "1.0",
@@ -7,6 +10,9 @@
     "Microsoft.VisualStudio.Workload.ManagedGame"
   ]
 } 
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 {
@@ -16,6 +22,10 @@
   ]
 } 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> ed2ae60b0b56b4a13a83df7988e7f70e8dcd45cd
+>>>>>>> Stashed changes
 =======
 >>>>>>> ed2ae60b0b56b4a13a83df7988e7f70e8dcd45cd
 >>>>>>> Stashed changes

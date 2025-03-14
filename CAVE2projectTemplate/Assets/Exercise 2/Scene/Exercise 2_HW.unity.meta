@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<<< Updated upstream:CAVE2projectTemplate/Assets/Exercise 2/Scene/Exercise 2_HW.unity.meta
 guid: 5ccadd8e78313aa48887fa349d290fc7
 ========
@@ -7,11 +8,16 @@ guid: 559fc1b5a43447649bfde61ccabbcef0
 folderAsset: yes
 >>>>>>>> Stashed changes:CAVE2projectTemplate/Assets/Exercise 2.meta
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<<< HEAD:CAVE2projectTemplate/Assets/Scenes/test.unity.meta
 guid: f8cd218225d2c4b31b035ae0bf1e2deb
 ========
 guid: 5ccadd8e78313aa48887fa349d290fc7
 >>>>>>>> ed2ae60b0b56b4a13a83df7988e7f70e8dcd45cd:CAVE2projectTemplate/Assets/Exercise 2/Scene/Exercise 2_HW.unity.meta
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 DefaultImporter:
   externalObjects: {}
