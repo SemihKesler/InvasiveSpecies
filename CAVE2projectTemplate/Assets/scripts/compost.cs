@@ -11,7 +11,17 @@ public class compost : MonoBehaviour
 
     void Start()
     {
-        fact.text = "";
+        fact.text =
+@"Compost Machine:
+   
+    Composting Process:
+    1) Accumulate Organic Materials
+        (Dirt, Plants, Leaves, etc..)
+    2) Heat up Compost to kill off living plants
+    3) Mix Compost Well
+    4) Use created compost with plant to improve growth
+
+Insert Invasive Plants Below ↓";
     }
 
 
