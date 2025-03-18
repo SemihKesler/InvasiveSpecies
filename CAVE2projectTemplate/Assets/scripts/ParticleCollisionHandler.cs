@@ -30,7 +30,6 @@ public class ParticleCollisionHandler : MonoBehaviour
             }
             Color newColor = material.color;
             newColor.a -= fadeSpeed;
-            Debug.Log(newColor.a);
             material.color = newColor;
             if (material.color.a <= 0)
             {

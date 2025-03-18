@@ -3,6 +3,7 @@
 public class SprayBottle : MonoBehaviour
 {
     public ParticleSystem sprayParticles;
+    bool changeState = false;
 
     void Start()
     {
@@ -18,12 +19,11 @@ public class SprayBottle : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(2))
+        if (Input.GetMouseButtonDown(2) || CAVE2.GetButtonDown(CAVE2.Button.ButtonUp))
         {
             StartSpray();
         }
-
-        if (Input.GetMouseButtonUp(2))
+        if (Input.GetMouseButtonUp(2) || CAVE2.GetButtonUp(CAVE2.Button.ButtonUp))
         {
             StopSpray();
         }

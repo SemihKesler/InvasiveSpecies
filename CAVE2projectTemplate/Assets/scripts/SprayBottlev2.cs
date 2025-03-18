@@ -7,7 +7,7 @@ public class SprayBottlev2 : MonoBehaviour
     void Update()
     {
         // Check for middle mouse button click
-        if (Input.GetMouseButtonDown(2)) // 2 is the middle mouse button
+        if (Input.GetMouseButtonDown(2) || CAVE2.GetButtonDown(CAVE2.Button.ButtonUp)) // 2 is the middle mouse button
         {
             // Emit a burst of particles
             sprayParticles.Emit(10); // Emit 10 particles

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Invasive
   - InvasivePlant
+  - Axe
   layers:
   - Default
   - TransparentFX
