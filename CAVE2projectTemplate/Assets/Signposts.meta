@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:CAVE2projectTemplate/Assets/Signposts.meta
 guid: a7ff7dc29126dc841b8ce6ceabb26e00
 folderAsset: yes
 DefaultImporter:
+========
+guid: 7ecbc78e8fd1ef8479105528f4c8afb2
+NativeFormatImporter:
+>>>>>>>> 44f395c21c147adb445e773ac1979243d1aee1b9:CAVE2projectTemplate/Assets/materials/metal.mat.meta
   externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

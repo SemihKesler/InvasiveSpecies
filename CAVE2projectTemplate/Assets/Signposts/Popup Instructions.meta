@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:CAVE2projectTemplate/Assets/Signposts/Popup Instructions.meta
 guid: 77c9cef4e0a74ad4cb60bd0b813afe87
 folderAsset: yes
 DefaultImporter:
+========
+guid: 142815e3c07c5496c9aaabe007eb7e15
+NativeFormatImporter:
+>>>>>>>> 44f395c21c147adb445e773ac1979243d1aee1b9:CAVE2projectTemplate/Assets/materials/New Material.mat.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
