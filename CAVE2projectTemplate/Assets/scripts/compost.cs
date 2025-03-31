@@ -30,11 +30,12 @@ Insert Invasive Plants Below ↓";
     {
         if (collision.gameObject.CompareTag("InvasivePlant"))
         {
+            Destroy(collision.gameObject);
             PlantFact plant = collision.gameObject.GetComponent<PlantFact>();
 
             fact.text = plant.fact;
             machine.PlayOneShot(compostSound);
-            Destroy(collision.gameObject);
+            
 
             StartCoroutine(LidAnimation());
 

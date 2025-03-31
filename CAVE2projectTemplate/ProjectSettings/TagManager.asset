@@ -7,7 +7,6 @@ TagManager:
   - Invasive
   - InvasivePlant
   - Axe
-  - NaturalPlant
   layers:
   - Default
   - TransparentFX
