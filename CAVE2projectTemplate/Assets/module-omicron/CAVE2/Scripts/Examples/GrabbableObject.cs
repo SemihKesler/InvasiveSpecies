@@ -306,6 +306,10 @@ public class GrabbableObject : CAVE2Interactable {
         wasGrabbed = true;
     }
 
+    public bool IsGrabbed()
+    {
+        return grabbed;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
