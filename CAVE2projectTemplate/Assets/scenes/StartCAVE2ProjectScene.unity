@@ -940,7 +940,6 @@ MeshFilter:
   m_GameObject: {fileID: 937881739}
   m_Mesh: {fileID: -2152663422108491828, guid: 0603c567a0a4d40798b25cd75e8d8321, type: 3}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &940313544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,8 +1186,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -3758573805739257388, guid: 309b527935a2e4044a67f99195009d83, type: 3}
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!4 &1120280153 stripped
@@ -10991,7 +10988,6 @@ Transform:
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1001 &1308147412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11102,8 +11098,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2093213887431206157}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &1339942152
@@ -11742,7 +11736,6 @@ Canvas:
   m_SortingOrder: 0
   m_TargetDisplay: 0
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &1555656780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8772553761152169929, guid: f661faa8afdbb604bbb84cfd2b46d037,
@@ -11861,8 +11854,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7ecbc78e8fd1ef8479105528f4c8afb2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 309b527935a2e4044a67f99195009d83, type: 3}
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!4 &1807001813 stripped
@@ -12979,7 +12970,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
     - target: {fileID: 2227969113766734507, guid: d3cdf64ce8f36e941861e42163120d67,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -13025,15 +13015,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 14
 =======
-=======
->>>>>>> Stashed changes
     - target: {fileID: 2227969113550008634, guid: d3cdf64ce8f36e941861e42163120d67,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
       value: 50
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -13219,7 +13204,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
     - target: {fileID: 4769448005509764508, guid: 79bf8b338fc54b04fb2092f3e1b0d2ba,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -13235,8 +13219,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 3.2599983
 =======
-=======
->>>>>>> Stashed changes
     - target: {fileID: 4769448005474315294, guid: 79bf8b338fc54b04fb2092f3e1b0d2ba,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13261,20 +13243,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 2.1
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4769448005474315289, guid: 79bf8b338fc54b04fb2092f3e1b0d2ba,
         type: 3}
       propertyPath: m_FontData.m_FontSize
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
       value: 15
-=======
-      value: 150
->>>>>>> Stashed changes
 =======
       value: 150
 >>>>>>> Stashed changes
@@ -13282,7 +13257,6 @@ PrefabInstance:
     - target: {fileID: 4769448005474315289, guid: 79bf8b338fc54b04fb2092f3e1b0d2ba,
         type: 3}
       propertyPath: m_FontData.m_MaxSize
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       value: 145
       objectReference: {fileID: 0}
@@ -13292,8 +13266,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
 =======
-=======
->>>>>>> Stashed changes
       value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4769448005474315289, guid: 79bf8b338fc54b04fb2092f3e1b0d2ba,
@@ -13307,9 +13279,6 @@ PrefabInstance:
       value: "Explore Plant Area: \n\nFind the invasive red letters \nand drag them
         to Compost!\r"
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79bf8b338fc54b04fb2092f3e1b0d2ba, type: 3}
@@ -13380,7 +13349,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     - target: {fileID: 4552929412077214396, guid: c0da0b6223900ba41b750409a470a7fc,
         type: 3}
@@ -13488,15 +13456,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 20
 =======
-=======
->>>>>>> Stashed changes
     - target: {fileID: 4552929413940986157, guid: c0da0b6223900ba41b750409a470a7fc,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
       value: 50
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -14011,7 +13974,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
     - target: {fileID: 7450437233814988628, guid: cd9531933053a4343b5c6c8cd52b937f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -14082,15 +14044,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 114
 =======
-=======
->>>>>>> Stashed changes
     - target: {fileID: 7450437233328929352, guid: cd9531933053a4343b5c6c8cd52b937f,
         type: 3}
       propertyPath: m_DynamicPixelsPerUnit
       value: 50
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     m_RemovedComponents: []
