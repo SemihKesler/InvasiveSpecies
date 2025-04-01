@@ -641,10 +641,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: dce8d8fd-5844-401b-975c-90c83e18a2b1
+  cloudProjectId: 31b5947c-e1e2-4317-b6ab-88c9a80b04ee
   framebufferDepthMemorylessMode: 0
-  projectName: CAVE2projectTemplate
-  organizationId: 5cadb4d-cd78-4f09-a6bd-e1258d1eb848
+  projectName: 2025_CC_Spring_ForestInvaders_Test2
+  organizationId: skesl2
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

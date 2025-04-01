@@ -27,7 +27,6 @@
  
 using UnityEngine;
 using System.Collections;
-using UnityEngine.XR.WSA.Input;
 
 public class GrabbableObject : CAVE2Interactable {
 
