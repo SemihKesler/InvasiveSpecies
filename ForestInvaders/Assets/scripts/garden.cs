@@ -7,8 +7,9 @@ public class garden : MonoBehaviour
     public AudioClip compostSound;
     public AudioSource machine;
 
-    private Vector3 initialPlantPosition = new Vector3(-16.8f, 0.6f, 6f);
-    private float zOffsetPerPlant = 1f;
+    private Vector3 initialPlantPosition = new Vector3(-18.8f, 0.6f, 6f);
+    private float zOffsetPerPlant = 0.75f;
+    private float xOffsetPerPlant = 0.75f;
 
     public static int planted = 0;
     public static int column = 0;
@@ -50,21 +51,25 @@ public class garden : MonoBehaviour
                 column = 0;
             }
 
+            // Adjust the planting positions based on the rotated garden
             if (planted < 4)
             {
-                newPosition.z += column * zOffsetPerPlant;
-                newPosition.x = -16.8f;
+                // Diagonal adjustment: Using both x and z offsets for diagonal planting
+                newPosition.x = -18.8f + (column * xOffsetPerPlant);  // Adjust x for diagonal planting
+                newPosition.z = initialPlantPosition.z + (column * zOffsetPerPlant);  // Adjust z for diagonal planting
             }
             else if (planted >= 4 && planted < 8)
             {
-                newPosition.z += column * zOffsetPerPlant;
-                newPosition.x = -16.1f;
+                // Continue with the diagonal planting in this section
+                newPosition.x = -18.1f + (column * xOffsetPerPlant);  // Adjust x for diagonal planting
+                newPosition.z = initialPlantPosition.z + (column * zOffsetPerPlant);  // Adjust z for diagonal planting
             }
             else if (planted > 8)
             {
                 Destroy(collision.gameObject);
             }
-            
+
+
 
             collision.transform.position = newPosition;
             collision.transform.rotation = Quaternion.identity;

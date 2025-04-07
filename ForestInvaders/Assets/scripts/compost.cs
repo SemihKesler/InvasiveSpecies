@@ -9,8 +9,11 @@ public class compost : MonoBehaviour
     public AudioSource machine;
     public Text fact;
     public GameObject lid;
-    public GameObject newPlantPrefab; // Reference to the prefab you want to spawn
-    public Transform spawnLocation; // Where the new object should appear
+    public GameObject newPlantPrefab;
+    public Image compostSign;
+    public Sprite Compost_Image;
+    public Sprite Johnsongrass_Image;
+    public Transform spawnLocation;
 
     private int factIter = 0;
     private List<string> facts = new List<string>();
@@ -27,16 +30,9 @@ public class compost : MonoBehaviour
         facts.Add(fact3);
 
         fact.text =
-@"Compost Machine:
-   
-    Composting Process:
-    1) Accumulate Organic Materials
-        (Dirt, Plants, Leaves, etc..)
-    2) Heat up Compost to kill off living plants
-    3) Mix Compost Well
-    4) Use created compost with plant to improve growth
-
-Insert Invasive Plants Below ↓";
+            @"About the Composting Process:" +
+            "Compost";
+            
     }
 
     void OnCollisionEnter(Collision collision)
@@ -48,13 +44,16 @@ Insert Invasive Plants Below ↓";
                 Destroy(collision.gameObject);
                 PlantFact plant = collision.gameObject.GetComponent<PlantFact>();
 
-                fact.text = plant.fact;
+                if (plant.fact == "Johnsongrass") {
+                    compostSign.sprite = Johnsongrass_Image;
+                }
+                StartCoroutine(ResetScreen(10f));
+
                 machine.PlayOneShot(compostSound);
                 blockColisions = true;
                 StartCoroutine(LidAnimation());
 
-                // Spawn a new object after a delay (optional)
-                StartCoroutine(SpawnNewObjectAfterDelay(1.5f)); // Adjust delay as needed
+                StartCoroutine(SpawnNewObjectAfterDelay(1.5f));
             }
         }
     }
@@ -111,5 +110,10 @@ Insert Invasive Plants Below ↓";
         {
             Debug.LogWarning("Prefab or spawn location not set in the inspector!");
         }
+    }
+
+    IEnumerator ResetScreen(float delay) {
+        yield return new WaitForSeconds(delay);
+        compostSign.sprite = Compost_Image;
     }
 }
