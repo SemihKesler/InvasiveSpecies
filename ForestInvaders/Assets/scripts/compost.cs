@@ -7,9 +7,11 @@ public class compost : MonoBehaviour
 {
     public AudioClip compostSound;
     public AudioSource machine;
-    public Text fact;
+    // public Text fact;
     public GameObject lid;
-    public GameObject newPlantPrefab;
+    public GameObject milkweedPrefab;
+    public GameObject violetPrefab;
+    public GameObject coneflowerPrefab;
     public Image compostSign;
     public Sprite Compost_Image;
     public Sprite Johnsongrass_Image;
@@ -19,6 +21,8 @@ public class compost : MonoBehaviour
     public SkyManager skyManager;
 
     private int factIter = 0;
+
+    private List<GameObject> prefabs = new List<GameObject>();
     private List<string> facts = new List<string>();
     [TextArea] public string fact1;
     [TextArea] public string fact2;
@@ -31,11 +35,11 @@ public class compost : MonoBehaviour
         facts.Add(fact1);
         facts.Add(fact2);
         facts.Add(fact3);
-        compostSign.sprite = Compost_Image;
 
-        fact.text =
-            @"About the Composting Process:" +
-            "Compost";
+        prefabs.Add(milkweedPrefab);
+        prefabs.Add(coneflowerPrefab);
+        prefabs.Add(violetPrefab);
+        compostSign.sprite = Compost_Image;
             
     }
 
@@ -106,12 +110,12 @@ public class compost : MonoBehaviour
         yield return new WaitForSeconds(delay);
         blockColisions = false;
 
-        if (newPlantPrefab != null && spawnLocation != null)
+        if (prefabs[factIter] != null && spawnLocation != null)
         {
             GameObject instance = null;
             if (instance == null)
             {
-                instance = Instantiate(newPlantPrefab, spawnLocation.transform.position, spawnLocation.transform.rotation);
+                instance = Instantiate(prefabs[factIter], spawnLocation.transform.position, spawnLocation.transform.rotation);
                 if (factIter > (facts.Count - 1))
                 {
                     factIter = 0;

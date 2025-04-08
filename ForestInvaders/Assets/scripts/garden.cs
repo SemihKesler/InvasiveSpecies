@@ -18,9 +18,16 @@ public class garden : MonoBehaviour
     private int totalPlots = 6;
     public SkyManager skyManager;
 
+    public Image gardenSign;
+    public Sprite Garden_Image;
+    public Sprite Milkweed_Image;
+    public Sprite PurpleConeflower_Image;
+    public Sprite DooryardViolet_Image;
+
     void Start()
     {
         planted = 0;
+        gardenSign.sprite = Garden_Image;
     }
 
     void OnCollisionEnter(Collision collision)
@@ -30,13 +37,23 @@ public class garden : MonoBehaviour
             machine.PlayOneShot(compostSound);
             totalPlots--;
             PlantFact plant = collision.gameObject.GetComponent<PlantFact>();
-            string screen = @"Garden: "+totalPlots+ "/6 Spaces Remaining\n" +
-                "\nValid Plants:" +
-                "\n- Milkweed" +
-                "\n- Dooryard Violet" +
-                "\n- PurpleCornflower\n\n" + plant.fact;
+            // string screen = @"Garden: "+totalPlots+ "/6 Spaces Remaining\n" +
+            //     "\nValid Plants:" +
+            //     "\n- Milkweed" +
+            //     "\n- Dooryard Violet" +
+            //     "\n- PurpleCornflower\n\n" + plant.fact;
+
+            if (plant.fact == "Milkweed") {
+                gardenSign.sprite = Milkweed_Image;
+            }
+            else if (plant.fact == "Purple Coneflower") {
+                gardenSign.sprite = PurpleConeflower_Image;
+            }
+            else if (plant.fact == "Dooryard Violet") {
+                gardenSign.sprite = DooryardViolet_Image;
+            }
             
-            gardenScreen.text = screen;
+            // gardenScreen.text = screen;
 
             Rigidbody plantRb = collision.gameObject.GetComponent<Rigidbody>();
             if (plantRb != null)
@@ -52,18 +69,15 @@ public class garden : MonoBehaviour
                 column = 0;
             }
 
-            // Adjust the planting positions based on the rotated garden
             if (planted < 4)
             {
-                // Diagonal adjustment: Using both x and z offsets for diagonal planting
-                newPosition.x = -18.8f + (column * xOffsetPerPlant);  // Adjust x for diagonal planting
-                newPosition.z = initialPlantPosition.z + (column * zOffsetPerPlant);  // Adjust z for diagonal planting
+                newPosition.x = -18.8f + (column * xOffsetPerPlant);
+                newPosition.z = initialPlantPosition.z + (column * zOffsetPerPlant);
             }
             else if (planted >= 4 && planted < 8)
             {
-                // Continue with the diagonal planting in this section
-                newPosition.x = -18.1f + (column * xOffsetPerPlant);  // Adjust x for diagonal planting
-                newPosition.z = initialPlantPosition.z + (column * zOffsetPerPlant);  // Adjust z for diagonal planting
+                newPosition.x = -18.1f + (column * xOffsetPerPlant);
+                newPosition.z = initialPlantPosition.z + (column * zOffsetPerPlant);
             }
             else if (planted > 8)
             {
