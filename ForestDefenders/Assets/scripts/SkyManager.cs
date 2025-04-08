@@ -141,8 +141,7 @@ public class SkyManager : MonoBehaviour
 
             if (exposureMap)
             {
-                if (invasiveMapped)
-                {
+                if (t > sky) {
                     skyboxMat.SetFloat("_Exposure", Mathf.Lerp(minExposure, maxExposure, t));
                 }
                 else

@@ -1195,7 +1195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &976706061324802944
 Transform:
   m_ObjectHideFlags: 0
@@ -1751,10 +1751,10 @@ MonoBehaviour:
   defaultMesh: {fileID: 0}
   useSimplifiedMesh: 0
   simpleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  pointingOverMaterial: {fileID: 2100000, guid: 2a6e178022e90be498acb517c9f1a51c,
+  pointingOverMaterial: {fileID: 2100000, guid: fac07ae50978eee49998333bc327de7d,
     type: 2}
   showTouchingOver: 1
-  touchingOverMaterial: {fileID: 2100000, guid: 2a6e178022e90be498acb517c9f1a51c,
+  touchingOverMaterial: {fileID: 2100000, guid: fac07ae50978eee49998333bc327de7d,
     type: 2}
 --- !u!114 &-5249972508815419889
 MonoBehaviour:

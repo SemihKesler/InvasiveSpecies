@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.87276965, g: 0.8927765, b: 0.98555, a: 1}
+  m_IndirectSpecularColor: {r: 0.8727656, g: 0.8927765, b: 0.98555, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8198,18 +8198,18 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Interactions:
 
-        - Axe chops down invasive tree (onces with particles) after collision
+        - Axe chops down invasive tree (ones with particles) after collision
 
         - Spray can remove invasive tree rings and stumps with particle collisions
 
         - Invasive plant (Red Outline) can be grabbed and placed in compost machine
         and a native seed will dispense, a fact and picture is also displayed
 
-        - Seeds can grabbed and planted in garden plot and a fact is also displayed
+        - Seeds can grabbed and planted in garden plot, a fact and picture is also
+        displayed
 
-        - Removal of invasives plants reduces fog and transitions to lighter ambiance
-
-        - Planting seeds lightens the sky'
+        - Removing invasives plants and planting native seeds reduces fog, transitions
+        to lighter ambiance, and brightens sky'
       objectReference: {fileID: 0}
     - target: {fileID: 114000010683909002, guid: c1621f4dd1e8c2748a5a423aa7736d55,
         type: 3}
@@ -8238,6 +8238,8 @@ PrefabInstance:
         - When hovering over object shows outline Hold X to grab
 
         - Once an invasive plant is grabbed hold Down to pull it towards you
+
+        - Press L2 to toggle flashlight
 
         - To simulate removal of all invasive species press Up to reverse press Up
         again
@@ -8410,19 +8412,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabSound: {fileID: 8300000, guid: ef929dc85adb6064dbc6151a483ceaee, type: 3}
   failSafe: {fileID: 0}
---- !u!114 &1490524928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490524918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b3d08b773239b64fa84012bd9c48f1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textBoxToHide: {fileID: 0}
 --- !u!82 &1490524929
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8631,8 +8620,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invasives: {fileID: 2054421114}
   skyboxMat: {fileID: 2100000, guid: 0b846be1b116429409a7669cacf2a62e, type: 2}
-  fogColor: {r: 0.09433961, g: 0.038269844, b: 0.038269844, a: 1}
-  nightDensity: 0.075
+  fogColor: {r: 0.09433961, g: 0.027589884, b: 0.027589884, a: 1}
+  nightDensity: 0.08
   dayDensity: 0
   minExposure: 0.1
   maxExposure: 1

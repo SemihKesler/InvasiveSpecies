@@ -231,10 +231,10 @@ MonoBehaviour:
   defaultMesh: {fileID: 0}
   useSimplifiedMesh: 0
   simpleMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  pointingOverMaterial: {fileID: 2100000, guid: 2a6e178022e90be498acb517c9f1a51c,
+  pointingOverMaterial: {fileID: 2100000, guid: fac07ae50978eee49998333bc327de7d,
     type: 2}
   showTouchingOver: 1
-  touchingOverMaterial: {fileID: 2100000, guid: 2a6e178022e90be498acb517c9f1a51c,
+  touchingOverMaterial: {fileID: 2100000, guid: fac07ae50978eee49998333bc327de7d,
     type: 2}
 --- !u!1001 &7684581918832862651
 PrefabInstance:
@@ -243,11 +243,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5121535299670040890}
     m_Modifications:
-    - target: {fileID: 3447918512197660515, guid: 58efc483e0cc1344ba396fec52d6e754,
-        type: 3}
-      propertyPath: m_Name
-      value: Purple_Cornflower
-      objectReference: {fileID: 0}
     - target: {fileID: 1838082478680448368, guid: 58efc483e0cc1344ba396fec52d6e754,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,6 +312,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.15249543
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447918512197660515, guid: 58efc483e0cc1344ba396fec52d6e754,
+        type: 3}
+      propertyPath: m_Name
+      value: Purple_Cornflower
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447918512197660515, guid: 58efc483e0cc1344ba396fec52d6e754,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58efc483e0cc1344ba396fec52d6e754, type: 3}

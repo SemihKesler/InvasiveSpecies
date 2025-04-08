@@ -20,7 +20,7 @@ public class ToggleFlashlight : MonoBehaviour
 
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.F) || CAVE2.GetButtonDown(CAVE2.Button.ButtonDown))
+       if (Input.GetKeyDown(KeyCode.F) || CAVE2.GetButtonDown(CAVE2.Button.Button7))
         {
             lightState = !lightState;
             flashlight.enabled = lightState;
