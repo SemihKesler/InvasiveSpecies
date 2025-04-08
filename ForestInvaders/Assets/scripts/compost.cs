@@ -13,6 +13,8 @@ public class compost : MonoBehaviour
     public Image compostSign;
     public Sprite Compost_Image;
     public Sprite Johnsongrass_Image;
+    public Sprite ChocolateVine_Image;
+    public Sprite GarlicMustard_Image;
     public Transform spawnLocation;
 
     private int factIter = 0;
@@ -28,6 +30,7 @@ public class compost : MonoBehaviour
         facts.Add(fact1);
         facts.Add(fact2);
         facts.Add(fact3);
+        compostSign.sprite = Compost_Image;
 
         fact.text =
             @"About the Composting Process:" +
@@ -46,6 +49,12 @@ public class compost : MonoBehaviour
 
                 if (plant.fact == "Johnsongrass") {
                     compostSign.sprite = Johnsongrass_Image;
+                }
+                else if (plant.fact == "Garlic Mustard") {
+                    compostSign.sprite = GarlicMustard_Image;
+                }
+                else if (plant.fact == "Chocolate Vine") {
+                    compostSign.sprite = ChocolateVine_Image;
                 }
                 StartCoroutine(ResetScreen(10f));
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20215234, g: 0.21277055, b: 0.2460205, a: 1}
+  m_IndirectSpecularColor: {r: 0.45549196, g: 0.47885346, b: 0.55346125, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 308599707}
   - component: {fileID: 308599706}
   m_Layer: 5
-  m_Name: Image
+  m_Name: compost screen 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ba1a9167159c4b25a131d0bd3f1daf0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8917fd1b0d654f528ced46be98b652b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -453,6 +453,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308599704}
   m_CullTransparentMesh: 0
+--- !u!1 &318531540
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318531544}
+  - component: {fileID: 318531543}
+  - component: {fileID: 318531542}
+  - component: {fileID: 318531541}
+  m_Layer: 0
+  m_Name: Native Plant Spawn Table
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &318531541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318531540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &318531542
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318531540}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fecd10f69b6e64ac48a5cd0b4b1195f7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &318531543
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318531540}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &318531544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318531540}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.4890003, y: -0.304, z: 3.1080003}
+  m_LocalScale: {x: 0.48581, y: 0.06998501, z: 0.48581}
+  m_Children: []
+  m_Father: {fileID: 421133223}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &336308770 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010099233380, guid: c1621f4dd1e8c2748a5a423aa7736d55,
@@ -593,6 +685,7 @@ Transform:
   - {fileID: 1441719893}
   - {fileID: 1347521988}
   - {fileID: 6103121339938076997}
+  - {fileID: 318531544}
   - {fileID: 5535152837800074357}
   - {fileID: 597754690}
   - {fileID: 3396015235362961673}
@@ -880,7 +973,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 421133223}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!4 &619693541 stripped
 Transform:
@@ -2049,6 +2142,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instructionText: {fileID: 1892350843}
   displayTime: 5
+--- !u!1 &1133135443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133135444}
+  - component: {fileID: 1133135446}
+  - component: {fileID: 1133135445}
+  m_Layer: 5
+  m_Name: compost screen 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1133135444
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133135443}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 6.7}
+  m_LocalScale: {x: 1.2718201, y: 0.55426, z: 0.33708}
+  m_Children: []
+  m_Father: {fileID: 1257817460870381851}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.4, y: -1.7}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1133135445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133135443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4ba1a9167159c4b25a131d0bd3f1daf0, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1133135446
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133135443}
+  m_CullTransparentMesh: 0
 --- !u!1 &1137449531
 GameObject:
   m_ObjectHideFlags: 0
@@ -12175,8 +12341,7 @@ PrefabInstance:
     - target: {fileID: 2757191979273011565, guid: f661faa8afdbb604bbb84cfd2b46d037,
         type: 3}
       propertyPath: fact
-      value: "\t\t       Garlic Mustard can spread\n\t\t       seeds through the wind
-        \n\t\t       and its roots can alter soil"
+      value: Garlic Mustard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f661faa8afdbb604bbb84cfd2b46d037, type: 3}
@@ -13784,6 +13949,7 @@ RectTransform:
   m_Children:
   - {fileID: 1257817462216870412}
   - {fileID: 308599705}
+  - {fileID: 1133135444}
   m_Father: {fileID: 1257817462845962896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14201,8 +14367,7 @@ PrefabInstance:
     - target: {fileID: 1884958495512273908, guid: d4b458467eeec27478a79476049ca32c,
         type: 3}
       propertyPath: fact
-      value: "\t\t       Johnson Grass grows quickly \n\t\t       and outcompete native
-        \n\t\t       species and farmland"
+      value: Johnsongrass
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4b458467eeec27478a79476049ca32c, type: 3}
@@ -14378,7 +14543,7 @@ Transform:
   - {fileID: 365528614473563556}
   - {fileID: 5025596993752043968}
   m_Father: {fileID: 421133223}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3469540959799208844
 Transform:
@@ -14578,11 +14743,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5535152837800074358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15999985, y: 0.07999992, z: 0.59399986}
+  m_LocalPosition: {x: 1.484, y: 0.064, z: 3.189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 421133223}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5535152837800074358
 GameObject:
@@ -15077,8 +15242,7 @@ PrefabInstance:
     - target: {fileID: 7286460902349383207, guid: 8c7026dc79db05348a88f17169af2c0e,
         type: 3}
       propertyPath: fact
-      value: "\t\t      Chocolate Vine can grow \n\t\t      20-40ft in a season, \n\t\t
-        \     overtaking and shading \n\t\t      native plants"
+      value: Chocolate Vine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c7026dc79db05348a88f17169af2c0e, type: 3}
@@ -15465,6 +15629,13 @@ MonoBehaviour:
   fact: {fileID: 1257817462216870413}
   lid: {fileID: 3056393193620643121}
   newPlantPrefab: {fileID: 7033244833063069751, guid: 0ec5a65ee651c034984391502e0e5264,
+    type: 3}
+  compostSign: {fileID: 308599706}
+  Compost_Image: {fileID: 21300000, guid: 4ba1a9167159c4b25a131d0bd3f1daf0, type: 3}
+  Johnsongrass_Image: {fileID: 21300000, guid: cbc89715a37c946a084c230101a48af8, type: 3}
+  ChocolateVine_Image: {fileID: 21300000, guid: 68c86cca4c897420cb27fd7d06c96b90,
+    type: 3}
+  GarlicMustard_Image: {fileID: 21300000, guid: c8917fd1b0d654f528ced46be98b652b,
     type: 3}
   spawnLocation: {fileID: 5535152837800074357}
   fact1: "Milkweeds are the primary food source for \nmonarch butterfly caterpillers"
