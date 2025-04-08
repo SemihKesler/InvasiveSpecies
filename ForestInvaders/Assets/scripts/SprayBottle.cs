@@ -4,11 +4,14 @@ public class SprayBottle : MonoBehaviour
 {
     public ParticleSystem sprayParticles;
     bool changeState = false;
-    AudioSource audio;
+    private AudioSource audio;
+    private GrabbableObject grabbableObject;
 
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        Transform Parent = transform.parent;
+        grabbableObject = Parent.GetComponent<GrabbableObject>();
 
         if (sprayParticles == null)
         {
@@ -22,33 +25,64 @@ public class SprayBottle : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(2) || CAVE2.GetButtonDown(CAVE2.Button.ButtonUp))
+        if (grabbableObject != null)
         {
-            if (audio != null)
+            if (grabbableObject.getGrabbed())
             {
-                audio.Play();
+                Audio(true);
+                Spray(true);
             }
-            StartSpray();
+            else
+            {
+                Audio(false);
+                Spray(false);
+            }
         }
-        if (Input.GetMouseButtonUp(2) || CAVE2.GetButtonUp(CAVE2.Button.ButtonUp))
+        else
         {
-            if (audio != null)
-            {
-                audio.Pause();
-            }
-            StopSpray();
+            Audio(true);
+            Spray(true);
         }
     }
 
-    void StartSpray()
+    void Spray(bool toggle)
     {
-        Debug.Log("Spray started");
-        sprayParticles.Play();
+        if (toggle)
+        {
+            if (!sprayParticles.isPlaying)
+            {
+                sprayParticles.Play();
+            }
+        }
+        else
+        {
+            if (sprayParticles.isPlaying)
+            {
+                sprayParticles.Stop();
+            }
+        }
     }
 
-    void StopSpray()
+
+    void Audio(bool toggle)
     {
-        Debug.Log("Spray stopped");
-        sprayParticles.Stop();
+        if (audio != null)
+        {
+            if (toggle)
+            {
+                if (!audio.isPlaying)
+                {
+                    audio.Play();
+                }
+            }
+            else
+            {
+                if (audio.isPlaying)
+                {
+                    audio.Stop();
+                }
+            }
+
+        }
     }
 }

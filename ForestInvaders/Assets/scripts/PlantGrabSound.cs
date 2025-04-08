@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlantGrabSound : MonoBehaviour
 {
-    public AudioClip grabSound;           
-    private AudioSource audioSource;      
-    private GrabbableObject grabScript;   
-    private bool hasPlayed = false;      
-
+    public AudioClip grabSound;
+    private AudioSource audioSource;
+    private GrabbableObject grabScript;
+    private bool hasPlayed = false;
+    public FailSafe failSafe;
     void Start()
     {
         grabScript = GetComponent<GrabbableObject>();
@@ -23,14 +23,21 @@ public class PlantGrabSound : MonoBehaviour
 
     void Update()
     {
-        if (grabScript != null && grabScript.getGrabbed() && !hasPlayed)
+        if (grabScript != null && grabScript.getGrabbed())
         {
-            if (grabSound != null)
+            if (failSafe != null)
             {
-                audioSource.PlayOneShot(grabSound);
+                failSafe.setLastGrabbed(gameObject, grabScript);
             }
 
-            hasPlayed = true;
+            if (!hasPlayed)
+            {
+                if (grabSound != null)
+                {
+                    audioSource.PlayOneShot(grabSound);
+                }
+                hasPlayed = true;
+            }
         }
     }
 }

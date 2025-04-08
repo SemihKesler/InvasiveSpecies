@@ -16,6 +16,7 @@ public class garden : MonoBehaviour
 
     public Text gardenScreen;
     private int totalPlots = 6;
+    public SkyManager skyManager;
 
     void Start()
     {
@@ -83,6 +84,10 @@ public class garden : MonoBehaviour
 
             column++;
             planted++;
+            if (skyManager != null)
+            {
+                skyManager.addPlant();
+            }
         }
     }
 }

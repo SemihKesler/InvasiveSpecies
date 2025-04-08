@@ -13,6 +13,7 @@ public class TreeChop : MonoBehaviour
     private Material material;
     [SerializeField] private float fadeSpeed = 0.025f;
     private bool destroy = false;
+    public SkyManager skyManager;
 
     // Start is called before the first frame update
     void Start()
@@ -55,7 +56,8 @@ public class TreeChop : MonoBehaviour
             {
                 treeRb.velocity = Vector3.zero;
                 treeRb.constraints = RigidbodyConstraints.None;
-                if (audioSource != null){
+                if (audioSource != null)
+                {
                     if (chop != null)
                     {
                         audioSource.PlayOneShot(chop);
@@ -78,7 +80,11 @@ public class TreeChop : MonoBehaviour
 
             if (material.color.r <= 0f && material.color.g <= 0f)
             {
-                Destroy(gameObject,1f);
+                if (skyManager != null)
+                {
+                    skyManager.removeInvasive();
+                }
+                Destroy(gameObject, 1f);
             }
         }
     }

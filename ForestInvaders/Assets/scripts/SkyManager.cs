@@ -8,12 +8,12 @@ public class SkyManager : MonoBehaviour
     public Material skyboxMat;
 
     private int totalInvasive;
-    private int currInvasive;
+    private static int currInvasive;
+    private static int setInvasive;
 
-    public Color night = Color.black;
-    public Color day = Color.white;
+    public Color fogColor = Color.black;
     public float nightDensity = 0.1f;
-    public float dayDensity = 0.01f;
+    public float dayDensity = 0.00f;
 
     public float minExposure = 0.1f;
     public float maxExposure = 1.0f;
@@ -26,8 +26,41 @@ public class SkyManager : MonoBehaviour
     public float maxVolume = 0.5f;
     public float minVolume = 0.1f;
 
+    private float transitionPoint = 0.4f;
     private bool nightPlaying = false;
     private bool dayPlaying = false;
+
+    private bool exposureMap = true;
+    private bool invasiveMapped = false;
+
+    private float plantTotal = 3f;
+    private static float planted = 0f;
+
+    private bool failSafe = false;
+    public bool forceDay = false;
+    private bool lightOn = true;
+
+    public void removeInvasive()
+    {
+        if (currInvasive > 0)
+        {
+            currInvasive--;
+            updateSky();
+        }
+    }
+
+    public void addPlant()
+    {
+        planted += 1;
+        float sky = planted / plantTotal;
+        Debug.Log("Plant Percent: " + sky + " | Exposure: " + Mathf.Lerp(minExposure, maxExposure, sky));
+        if (planted >= 3)
+        {
+            forceDay = true;
+        }
+        updateSky();
+    }
+
 
     void Start()
     {
@@ -35,53 +68,130 @@ public class SkyManager : MonoBehaviour
         RenderSettings.skybox = skyboxMat;
         totalInvasive = invasives.childCount;
         currInvasive = totalInvasive;
+        setInvasive = totalInvasive;
         updateSky();
     }
 
-    void updateSky()
+    private void setWin()
     {
-        float t = 1 - ((float)currInvasive / totalInvasive);
+        RenderSettings.fogDensity = dayDensity;
+        skyboxMat.SetFloat("_Exposure", maxExposure);
+        setSound(true, maxVolume);
+    }
 
-        if (t >= 0.5)
+    void setSound(bool day, float t)
+    {
+        if (forceDay)
         {
-            if (daySound != null)
+            day = true;
+        }
+
+        if (AudioSource != null)
+        {
+            if (day)
             {
-                if (!dayPlaying)
+                if (daySound != null && !dayPlaying)
                 {
                     AudioSource.clip = daySound;
                     AudioSource.Play();
                     dayPlaying = true;
                 }
-                float t2 = 1 - (Mathf.Abs((0.5f - t) * 2f));
-                AudioSource.volume = Mathf.Lerp(minVolume, maxVolume, t2);
             }
-            if (flashlight != null)
+            else
             {
-                flashlight.SetActive(false);
-            }
-        }
-        else
-        {
-            if (nightSound != null)
-            {
-                if (!nightPlaying)
+                if (nightSound != null && !nightPlaying)
                 {
                     AudioSource.clip = nightSound;
                     AudioSource.Play();
                     nightPlaying = true;
                 }
-                float t2 = 1 - (t * 2f);
-                AudioSource.volume = Mathf.Lerp(maxVolume, minVolume, t2);
+            }
+            AudioSource.volume = Mathf.Lerp(minVolume, maxVolume, t);
+        }
+    }
+
+    public void updateSky()
+    {
+        if (!failSafe)
+        {
+            float t = 1 - ((float)currInvasive / totalInvasive);
+            float sky = planted / plantTotal;
+
+            if (t >= transitionPoint)
+            {
+                float t2 = 1 - (Mathf.Abs((transitionPoint - t) * (1 / (1 - transitionPoint))));
+                setSound(true, t2);
+
+                if (flashlight != null)
+                {
+                    if (lightOn)
+                    {
+                        flashlight.SetActive(false);
+                        lightOn = false;
+                    }
+                }
+            }
+            else
+            {
+                float t2 = (t * (1 / transitionPoint));
+                setSound(false, t2);
+            }
+            RenderSettings.fogColor = fogColor;
+            RenderSettings.fogDensity = Mathf.Lerp(nightDensity, dayDensity, t);
+
+            if (exposureMap)
+            {
+                if (invasiveMapped)
+                {
+                    skyboxMat.SetFloat("_Exposure", Mathf.Lerp(minExposure, maxExposure, t));
+                }
+                else
+                {
+                    skyboxMat.SetFloat("_Exposure", Mathf.Lerp(minExposure, maxExposure, sky));
+                }
+            }
+            else
+            {
+                skyboxMat.SetFloat("_Exposure", minExposure);
             }
         }
-
-        RenderSettings.fogColor = Color.Lerp(night, day, t);
-        RenderSettings.fogDensity = Mathf.Lerp(nightDensity, dayDensity, t);
-        skyboxMat.SetFloat("_Exposure", Mathf.Lerp(minExposure, maxExposure, t));
+        else
+        {
+            setWin();
+        }
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.V) || CAVE2.GetButtonDown(CAVE2.Button.ButtonUp))
+        {
+            failSafe = !failSafe;
+            if (!failSafe)
+            {
+                flashlight.SetActive(true);
+                lightOn = true;
+                nightPlaying = false;
+                dayPlaying = false;
+            }
+            else
+            {
+                flashlight.SetActive(false);
+                lightOn = false;
+            }
+
+            Debug.Log("Win State: " + failSafe);
+            updateSky();
+        }
+
         int newCount = invasives.childCount;
+        if (setInvasive < newCount)
+        {
+            newCount = setInvasive;
+        }
+        if (newCount < setInvasive)
+        {
+            setInvasive = newCount;
+        }
+
         if (newCount != currInvasive)
         {
             currInvasive = newCount;

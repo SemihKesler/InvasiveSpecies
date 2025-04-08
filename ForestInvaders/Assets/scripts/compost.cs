@@ -16,6 +16,7 @@ public class compost : MonoBehaviour
     public Sprite ChocolateVine_Image;
     public Sprite GarlicMustard_Image;
     public Transform spawnLocation;
+    public SkyManager skyManager;
 
     private int factIter = 0;
     private List<string> facts = new List<string>();
@@ -44,6 +45,10 @@ public class compost : MonoBehaviour
         {
             if (!blockColisions)
             {
+                if (skyManager != null)
+                {
+                    skyManager.removeInvasive();
+                }
                 Destroy(collision.gameObject);
                 PlantFact plant = collision.gameObject.GetComponent<PlantFact>();
 

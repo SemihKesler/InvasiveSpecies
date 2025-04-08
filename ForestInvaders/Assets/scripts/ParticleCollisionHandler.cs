@@ -9,6 +9,7 @@ public class ParticleCollisionHandler : MonoBehaviour
     private int prevHit = -1;
     private Renderer renderer;
     private Material material;
+    public SkyManager skyManager;
 
     private Color newColor;
 
@@ -33,6 +34,10 @@ public class ParticleCollisionHandler : MonoBehaviour
             material.color = newColor;
             if (material.color.a <= 0)
             {
+                if (skyManager != null)
+                {
+                    skyManager.removeInvasive();
+                }
                 Destroy(gameObject);
             }
         }

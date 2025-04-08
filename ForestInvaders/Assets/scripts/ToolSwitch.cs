@@ -25,9 +25,22 @@ public class ToolSwitch : MonoBehaviour
         if (axe == null)
         {
             Debug.Log("Axe Missing");
-        }if (spray == null)
+        }
+        if (spray == null)
         {
             Debug.Log("Spray Missing");
+        }
+    }
+
+    public GameObject getCurrentTool()
+    {
+        if (axeParent)
+        {
+            return axe;
+        }
+        else
+        {
+            return spray;
         }
     }
 
@@ -90,7 +103,8 @@ public class ToolSwitch : MonoBehaviour
                     switchTool();
                 }
             }
-            else {
+            else
+            {
                 if (sprayInit)
                 {
                     sprayGrab.setGrabbed(false);
